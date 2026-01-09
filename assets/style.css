@@ -1,0 +1,17 @@
+html,body{height:100%;margin:0;padding:0;}
+body{background-color:black;color:white;text-align:center;font-family:'Coming Soon',cursive;font-size:16px;padding:10px 10px 100px;min-height:100vh;}
+header{width:75vw;max-width:100%;margin:0 auto;padding:40px 20px;box-sizing:border-box;}
+header h1{font-size:clamp(20px,7vw,46px);margin:0;line-height:1.1;}
+header img{width:clamp(10%,7vw,12%);height:auto;display:block;margin:0 auto;}
+.message{max-width:75vw;margin:40px auto;white-space:pre-wrap;}
+#img-controls{display:flex;flex-direction:column;align-items:center;gap:8px;max-width:300px;margin:40px auto;padding:20px;border-radius:12px;font-family:'Coming Soon',cursive;color:white;}
+#img-controls label{margin-right:10px;min-width:60px;display:inline-block;}
+#img-controls input[type="range"]{width:100%;}
+#img-controls button{margin-top:20px;padding:10px 20px;font-family:'Coming Soon',cursive;font-size:18px;background-color:#333;color:white;border:none;border-radius:8px;cursor:pointer;}
+footer{position:fixed;bottom:0;left:0;width:100%;padding:20px 0;text-align:center;z-index:10;}
+#ground-container canvas{width:50vmin !important;height:50vmin !important;max-width:500px !important;max-height:500px !important;display:block !important;margin:0 auto !important;image-rendering:crisp-edges;}
+a{color:white;}
+a:link{color:white;}
+a:visited{color:white;}
+a:hover{color:white;}
+a:active{color:white;}
