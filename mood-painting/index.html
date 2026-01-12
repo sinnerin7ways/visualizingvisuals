@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VV: Mood Painting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="VV: Mood Painting">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="../">Visualizing Visuals: Mood Painting</a></h1>
+        <img src="../assets/favicon/vv-ico.png">
+    </header>
+    <p id="message">Your mood, visualized.</p>
+    <div id="canvas-container"></div>
+    <div id="img-controls">
+        <button class="butt" id="paintFrame" type="button">Paint</button>
+        <p>Overall, how good do you feel right now?</p>
+        <input type="range" id="goodbadSlider" min="-5" max="5" value="0" oninput="updateParameters()">
+        <p>How happy are you right now?</p>
+        <input type="range" id="happysadSlider" min="-5" max="5" value="0" oninput="updateParameters()">
+        <p>How energized are you right now?</p>
+        <input type="range" id="energySlider" min="-5" max="5" value="0" oninput="updateParameters()">
+        <p>How relaxed are you right now?</p>
+        <input type="range" id="calmSlider" min="-5" max="5" value="0" oninput="updateParameters()">
+        <p>How anxious are you right now?</p>
+        <input type="range" id="anxietySlider" min="-5" max="5" value="0" oninput="updateParameters()">
+        <button class ="butt" id="savePNG" type="button">Save PNG</button>
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="action.js"></script>
+</body>
+</html>

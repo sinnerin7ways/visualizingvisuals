@@ -11,7 +11,7 @@ function savePNG(){
 }
 
 function setup(){
-    createCanvas(2048,2048).parent('ground-container');
+    createCanvas(2048,2048).parent('canvas-container');
     pixelDensity(1);
     redrawCanvas();
     noLoop();
