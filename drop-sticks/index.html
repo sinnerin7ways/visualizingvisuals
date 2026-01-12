@@ -23,6 +23,7 @@
     <p id="message">Drop sticks on a canvas.</p>
     <div id="canvas-container"></div>
     <div id="img-controls">
+        <button id="savePNG" type="button">Save PNG</button>
         <p>Number of Sticks:</p>
         <input type="range" id="stickNum" min="1" max="100" value="10" oninput="updateFromControls()">
         <p>Background Color:</p>
@@ -39,7 +40,6 @@
         <input type="range" id="fgGreen" min="0" max="255" value="255" oninput="updateFromControls()">
         <label for="fgBlue">Blue</label>
         <input type="range" id="fgBlue" min="0" max="255" value="255" oninput="updateFromControls()">
-        <button id="savePNG" type="button">Save PNG</button>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
     <script src="action.js"></script>

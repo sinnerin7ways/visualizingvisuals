@@ -26,14 +26,14 @@ const neutralShape = 'square';
 const relaxShape = 'circle';
 
 const tiredShapeSize = 64;
-const neutralShapeSize = 128;
-const energeticShapeSize = 256;
+const neutralShapeSize = 256;
+const energeticShapeSize = 512;
 
 const zenShapeCount = 1;
-const calmShapeCount = 3;
-const neutralShapeCount = 5;
-const crazyShapeCount = 8;
-const insaneShapeCount = 10;
+const calmShapeCount = 5;
+const neutralShapeCount = 7;
+const crazyShapeCount = 10;
+const insaneShapeCount = 15;
 
 function savePNG() {
   const timestamp = year() + '-' + nf(month(), 2) + '-' + nf(day(), 2) + '_' +
