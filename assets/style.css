@@ -15,3 +15,4 @@ a:link{color:white;}
 a:visited{color:white;}
 a:hover{color:white;}
 a:active{color:white;}
+* {-webkit-tap-highlight-color: transparent;-webkit-touch-callout: none;touch-action: manipulation;}
