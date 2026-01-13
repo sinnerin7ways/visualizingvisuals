@@ -19,6 +19,11 @@ const ballPositions = [
   [CANVAS_SIZE/3*2,   CANVAS_SIZE/4*3]   // powerball
 ];
 
+function savePNG() {
+  const timestamp = `${year()}-${nf(month(), 2)}-${nf(day(), 2)}_${nf(hour(), 2)}-${nf(minute(), 2)}-${nf(second(), 2)}`;
+  saveCanvas(`powerball-${timestamp}`, 'png');
+}
+
 function shuffleFisherYates(arr) {
   // Modern Fisher–Yates shuffle using p5.js random()
   for (let i = arr.length - 1; i > 0; i--) {

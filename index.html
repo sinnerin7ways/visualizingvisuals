@@ -17,16 +17,38 @@
     <script src="action.js"></script>
 </head>
 <body>
-    <header>
-        <h1><a href="">Visualizing Visuals</a></h1>
-        <img src="assets/favicon/vv-ico.png">
-    </header>
-    <p id="message">Welcome to the site of sights to be seen.</p>
-    <a href="perlin-map/">Perlin Map</a>
-    <a href="drop-sticks/">Drop Sticks</a>
-    <a href="mood-painting/">Mood Painting</a>
-    <a href="draw-powerball/">Draw Powerball</a>
-    <p></p>
-    <a href="contact-shop/">Contact & Shop</a>
+  <header>
+    <h1><a href="">Visualizing Visuals</a></h1>
+    <img src="assets/favicon/vv-ico.png" alt="">
+  </header>
+
+  <p id="message">Welcome to the site of sights to be seen.</p>
+
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap: min(6vw, 40px); padding: 0 10px;">
+    <a href="perlin-map/" class="project-link">
+      <img src="assets/canvas-icons/perlin-map_ico.png" alt="Perlin Map">
+      <span>Perlin Map</span>
+    </a>
+
+    <a href="drop-sticks/" class="project-link">
+      <img src="assets/canvas-icons/drop-sticks_ico.png" alt="Drop Sticks">
+      <span>Drop Sticks</span>
+    </a>
+
+    <a href="mood-painting/" class="project-link">
+      <img src="assets/canvas-icons/mood-painting_ico.png" alt="Mood Painting">
+      <span>Mood Painting</span>
+    </a>
+
+    <a href="draw-powerball/" class="project-link">
+      <img src="assets/canvas-icons/powerball_ico.png" alt="Draw Powerball">
+      <span>Draw Powerball</span>
+    </a>
+  </div>
+
+  <div style="margin-top: 40px;">
+    <a href="contact-shop/" style="font-size: clamp(16px,4vw,21px); opacity:0.85;">Contact & Shop</a>
+  </div>
+  <div class="bottom-spacer"></div>
 </body>
 </html>

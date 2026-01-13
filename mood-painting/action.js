@@ -1,7 +1,7 @@
 let canvasSize = 2048;
 
 let bgColor = [125, 48, 90];
-let strokeColor = [96, 124, 50];
+let strokeColor = [110, 86, 70];
 let fillColor = [96, 124, 50];
 
 let goodbadVal = 0;
@@ -17,7 +17,7 @@ let shapeCount = 5;
 
 const terribleColors = [[39, 37, 27], [27, 39, 39], [39, 27, 39]];
 const badColors = [[52, 28, 15], [15, 51, 29], [29, 14, 52]];
-const neutralColors = [[125, 48, 90], [96, 124, 50], [96, 124, 50]];
+const neutralColors = [[125, 48, 90], [110, 86, 70], [96, 124, 50]];
 const goodColors = [[242, 167, 75], [75, 241, 172], [172, 73, 243]];
 const amazingColors = [[235, 224, 193], [194, 235, 224], [224, 193, 235]];
 
@@ -92,6 +92,7 @@ function updateParameters() {
   } else {
     chosenShape = anxiousShape;
   }
+  redraw();
 }
 
 function drawShapes(num, size, shapeType) {
