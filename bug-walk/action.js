@@ -6,7 +6,7 @@ let running = false;
 let totalSteps = 0;
 let maxSteps = 200;
 
-const bgColor = [8, 8, 14];
+const bgColor = [25, 25, 25];
 
 class Bug {
   constructor() {
