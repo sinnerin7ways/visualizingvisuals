@@ -46,7 +46,7 @@ header img {
   margin: 16px auto 28px;
 }
 
-/* Video grid */
+/* Video grid - max 500px per video */
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -102,7 +102,7 @@ header img {
   border: 0;
 }
 
-/* Original homepage cards */
+/* Homepage cards */
 .project-link {
   display: inline-flex;
   flex-direction: column;
@@ -130,31 +130,31 @@ header img {
   opacity: 0.92;
 }
 
-/* Project pages */
+/* Project pages - adjusted canvas sizing for better mobile & desktop balance */
 #canvas-container {
-  margin: 0 auto 32px;
+  margin: 24px auto 32px;
   width: 100%;
-  max-width: 720px;
-  flex: 1 1 auto;
+  max-width: 540px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 400px;
-  max-height: 65vh;
 }
 
 #canvas-container canvas {
-  max-width: 100%;
-  max-height: 65vh;
-  width: auto !important;
-  height: auto !important;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  max-width: 540px;
+  max-height: 540px;
   display: block;
   border-radius: 10px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.65);
   image-rendering: pixelated;
   background: #000;
+  object-fit: contain;
 }
 
+/* Image controls */
 #img-controls {
   width: 100%;
   max-width: 400px;
@@ -198,6 +198,7 @@ header img {
   background: rgba(255,255,255,0.11);
   border-radius: 5px;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 #img-controls input[type="range"]::-webkit-slider-thumb {
@@ -216,6 +217,23 @@ header img {
   transform: scale(1.15);
 }
 
+#img-controls input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  background: #888;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  cursor: grab;
+  border: none;
+}
+
+#img-controls input[type="range"]:active::-moz-range-thumb,
+#img-controls input[type="range"]:hover::-moz-range-thumb {
+  background: #aaa;
+  transform: scale(1.15);
+}
+
+/* Action buttons */
 .butt, #savePNG {
   padding: 12px 32px;
   font-size: 1.3rem;
@@ -240,6 +258,7 @@ header img {
   transform: translateY(0.5px);
 }
 
+/* Helpers */
 .bottom-spacer {
   height: 120px;
   flex-shrink: 0;
@@ -250,7 +269,7 @@ a {
   text-decoration: none;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (min-width: 1200px) {
   .video-grid {
     gap: 32px 24px;
@@ -283,5 +302,14 @@ a {
   .video-grid {
     gap: 20px 12px;
     margin: 24px auto;
+  }
+  
+  #canvas-container {
+    max-width: 90vw;           /* better mobile fit - not full width */
+  }
+  
+  #canvas-container canvas {
+    max-width: 90vw;
+    max-height: 90vw;
   }
 }
