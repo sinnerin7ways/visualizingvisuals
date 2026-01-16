@@ -1,11 +1,10 @@
 const canvasSize = 512;
-const btn = document.getElementById('flipCoin');
+const btn = document.getElementById('paintFrame');
 const msg = document.getElementById('message');
 let outcome = "none";
 let headImage;
 let tailImage;
 let noneImage;
-
 function flipCoin() {
   let num = random(1, 100);
   if(num > 50){
@@ -16,7 +15,6 @@ function flipCoin() {
   redraw();
   btn.onclick = reset;
   btn.innerHTML = 'Reset';
-
 }
 function reset(){
   outcome = 'none';
@@ -32,14 +30,13 @@ function drawCoin(){
     msg.innerHTML = 'Tails';
   }else if(outcome == 'none'){
     image(noneImage, 0, 0);
-    msg.innerHTML = 'Heads or Tails?';
+    msg.innerHTML = 'Outcome';
   }
 }
-
 function preload(){
-  headImage = loadImage('heads.png');
-  tailImage = loadImage('tails.png');
-  noneImage = loadImage('none.png');
+  headImage = loadImage('coins/heads.png');
+  tailImage = loadImage('coins/tails.png');
+  noneImage = loadImage('coins/none.png');
 }
 function setup() {
   createCanvas(canvasSize, canvasSize).parent('canvas-container');

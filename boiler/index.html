@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visuals: </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Visuals">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="header">
+  <a href="/" class="title">Visualizing Visuals</a>
+  <div class="menu-wrap">
+    <img src="/assets/favicon/vv-ico.png" alt="Menu" class="menu-btn">
+    <div class="dropdown">
+      <a href="/">Home</a>
+      <a href="/contact-shop/">Contact & Shop</a>
+      <a href="/p5-projects/">p5js Projects</a>
+      <a href="/videos">Videos</a>
+    </div>
+  </div>
+</header>
+<main>
+  <h1 class="page-title">Title of the Page</h1>
+  <section class="page-text">
+    <p>Just some text to add info and context.</p>
+  </section>
+  <div class="canvas-container">
+    <canvas width="512" height="512"></canvas>
+  </div>
+  <div id="img-controls">
+    <!-- Buttons -->
+    <button class="butt" type="button">Primary Action</button>
+    <button class="butt" type="button">Secondary</button>
+    <!-- Text input -->
+    <p>Text input:</p>
+    <input type="text" placeholder="Enter something..." />
+    <!-- Number input -->
+    <p>Number:</p>
+    <input type="number" min="0" max="100" value="42" step="1" />
+    <!-- Range sliders -->
+    <p>Slider One:</p>
+    <input type="range" class="img-slider" min="1" max="3" value="1" />
+    <p>Slider Two:</p>
+    <input type="range" class="img-slider" min="1" max="3" value="1" />
+    <!-- Checkbox -->
+    <p>Toggle option:</p>
+    <label>
+      <input type="checkbox" checked> Enable feature
+    </label>
+    <!-- Radio buttons -->
+    <p>Choose mode:</p>
+    <label><input type="radio" name="mode" value="easy" checked> Easy</label>
+    <label><input type="radio" name="mode" value="normal"> Normal</label>
+    <label><input type="radio" name="mode" value="hard"> Hard</label>
+    <!-- Select / Dropdown -->
+    <p>Choose quality:</p>
+    <select>
+      <option value="">— Select —</option>
+      <option value="low">Low</option>
+      <option value="medium" selected>Medium</option>
+      <option value="high">High</option>
+      <option value="ultra">Ultra</option>
+    </select>
+    <!-- Date picker -->
+    <p>Date:</p>
+    <input type="date" value="2026-01-15" />
+    <!-- Color picker -->
+    <p>Color:</p>
+    <input type="color" value="#ffffff" />
+  </div>
+  <div class="video-grid">
+    <div class="video-item">
+      <div class="video-wrapper">
+        <iframe width="930" height="523" src="https://www.youtube.com/embed/0zM5jiZJ5p0" 
+                title="Turning Vodka Into Toilet Paper (Reverse Nilered)" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <span>Turning Vodka Into Toilet Paper (Reverse Nilered)</span>
+    </div>
+    <div class="video-item">
+      <div class="video-wrapper">
+        <iframe width="930" height="523" src="https://www.youtube.com/embed/5e8rA9vL3Xc" 
+                title="The Bizarre Lore of Papa's Games" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <span>The Bizarre Lore of Papa's Games</span>
+    </div>
+  </div>
+  <figure class="image-grid">
+    <figure class="image-item">
+      <img src="https://picsum.photos/600/400?random=1" alt="Generated artwork - step 1">
+      <figcaption>Initial noise seed</figcaption>
+    </figure>
+    <figure class="image-item">
+      <img src="https://picsum.photos/600/400?random=2" alt="Generated artwork - step 2">
+      <figcaption>After 50 iterations</figcaption>
+    </figure>
+    <figure class="image-item">
+      <img src="https://picsum.photos/600/400?random=3" alt="Generated artwork - final">
+      <figcaption>Final high-res render</figcaption>
+    </figure>
+    <figure class="image-item">
+      <img src="https://picsum.photos/600/400?random=4" alt="Detail crop">
+      <figcaption>Detail crop – 4× zoom</figcaption>
+    </figure>
+  </figure>
+</main>
+<div class="bottom-spacer"></div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector(".menu-btn");
+  const menu = document.querySelector(".dropdown");
+  btn.onclick = e => {
+    e.stopPropagation();
+    menu.classList.toggle("active");
+  };
+  document.onclick = e => {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove("active");
+    }
+  };
+});
+</script>
+</body>
+</html>

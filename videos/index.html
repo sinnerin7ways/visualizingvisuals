@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VV: Videos</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Visuals: Videos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
@@ -11,23 +11,52 @@
     <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg">
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
-    <meta name="apple-mobile-web-app-title" content="VV: Videos">
+    <meta name="apple-mobile-web-app-title" content="Visuals">
     <link rel="manifest" href="../assets/favicon/site.webmanifest">
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <header>
-        <h1><a href="../">Visualizing Visuals: Videos</a></h1>
-        <img src="../assets/favicon/vv-ico.png">
-    </header>
-    <div class="video-grid">
-        <div class="video-item">
-            <div class="video-wrapper">
-                <iframe width="930" height="523" src="https://www.youtube.com/embed/WTadH9ob0-0" title="Living the Dream" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <span>Living the Dream</span>
-        </div>
+<header class="header">
+<a href="../" class="title">Visualizing Visuals</a>
+<div class="menu-wrap">
+    <img src="../assets/favicon/vv-ico.png" alt="Menu" class="menu-btn">
+    <div class="dropdown">
+      <a href="../">Home</a>
+      <a href="../contact-shop/">Contact & Shop</a>
+      <a href="../p5-projects/">p5js Projects</a>
+      <a href="../videos">Videos</a>
     </div>
-    <div class="bottom-spacer"></div>
-
+</div>
+</header>
+<main>
+<h1 class="page-title">Videos</h1>
+<section class="page-text">
+    <p>Embedded from my <a href="https://www.youtube.com/@visualizingvisuals" target="_blank">YouTube</a> channel.</p>
+</section>
+<div class="video-grid">
+    <div class="video-item">
+        <div class="video-wrapper">
+            <iframe width="930" height="523" src="https://www.youtube.com/embed/WTadH9ob0-0" title="Living the Dream" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <span>Living the Dream</span>
+    </div>
+</div>
+</main>
+<div class="bottom-spacer"></div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+const btn = document.querySelector(".menu-btn");
+const menu = document.querySelector(".dropdown");
+btn.onclick = e => {
+    e.stopPropagation();
+    menu.classList.toggle("active");
+};
+document.onclick = e => {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+    menu.classList.remove("active");
+    }
+};
+});
+</script>
+</body>
 </html>

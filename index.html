@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visuals</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TITLE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
@@ -14,53 +14,57 @@
     <meta name="apple-mobile-web-app-title" content="Visuals">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
     <link rel="stylesheet" href="assets/style.css">
-    <script src="action.js"></script>
 </head>
 <body>
-  <header>
-    <h1><a href="">Visualizing Visuals</a></h1>
-    <img src="assets/favicon/vv-ico.png" alt="">
-  </header>
-
-  <p id="message">Welcome to the site of sights to be seen.</p>
-
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap: min(6vw, 40px); padding: 0 10px;">
-    <a href="perlin-map/" class="project-link">
-      <img src="assets/canvas-icons/perlin-map_ico.png" alt="Perlin Map">
-      <span>Perlin Map</span>
-    </a>
-
-    <a href="drop-sticks/" class="project-link">
-      <img src="assets/canvas-icons/drop-sticks_ico.png" alt="Drop Sticks">
-      <span>Drop Sticks</span>
-    </a>
-
-    <a href="mood-painting/" class="project-link">
-      <img src="assets/canvas-icons/mood-painting_ico.png" alt="Mood Painting">
-      <span>Mood Painting</span>
-    </a>
-
-    <a href="draw-powerball/" class="project-link">
-      <img src="assets/canvas-icons/powerball_ico.png" alt="Draw Powerball">
-      <span>Draw Powerball</span>
-    </a>
-    <a href="heads-tails/" class="project-link">
-      <img src="assets/canvas-icons/coin.png" alt="Heads or Tails?">
-      <span>Heads or Tails?</span>
-    </a>
-    <a href="bug-walk/" class="project-link">
-      <img src="/assets/canvas-icons/bug-walk-ico.png" alt="Bug Walk">
-      <span>Bug Walk</span>
-    </a>
-
+<header class="header">
+  <a href="/" class="title">Visualizing Visuals</a>
+  <div class="menu-wrap">
+    <img src="/assets/favicon/vv-ico.png" alt="Menu" class="menu-btn">
+    <div class="dropdown">
+      <a href="/">Home</a>
+      <a href="/contact-shop/">Contact & Shop</a>
+      <a href="/p5-projects/">p5js Projects</a>
+      <a href="/videos">Videos</a>
+    </div>
   </div>
+</header>
+<main>
+  <h1 class="page-title">Home</h1>
+  <section class="page-text">
+    <p>Welcome to the site of sights to be seen.</p>
+  </section>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap: min(6vw, 40px); padding: 0 10px; padding-top: 10px;">
+    <a href="contact-shop/" class="project-link">
+      <img src="assets/favicon/vv-ico-circle.png" alt="Contact">
+      <span>Contact & Shop</span>
+    </a>
 
-  <div style="margin-top: 40px;">
-    <a href="videos/" style="font-size: clamp(16px,4vw,21px); opacity:0.85;">Videos</a>
+    <a href="p5-projects/" class="project-link">
+      <img src="assets/favicon/vv-ico-circle.png" alt="p5js projects">
+      <span>p5js Projects</span>
+    </a>
+
+    <a href="Videos/" class="project-link">
+      <img src="assets/favicon/vv-ico-circle.png" alt="Videos">
+      <span>Videos</span>
+    </a>
   </div>
-  <div style="margin-top: 40px;">
-    <a href="contact-shop/" style="font-size: clamp(16px,4vw,21px); opacity:0.85;">Contact & Shop</a>
-  </div>
-  <div class="bottom-spacer"></div>
+</main>
+<div class="bottom-spacer"></div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector(".menu-btn");
+  const menu = document.querySelector(".dropdown");
+  btn.onclick = e => {
+    e.stopPropagation();
+    menu.classList.toggle("active");
+  };
+  document.onclick = e => {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove("active");
+    }
+  };
+});
+</script>
 </body>
 </html>
