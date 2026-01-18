@@ -34,9 +34,9 @@ function drawCoin(){
   }
 }
 function preload(){
-  headImage = loadImage('coins/heads.png');
-  tailImage = loadImage('coins/tails.png');
-  noneImage = loadImage('coins/none.png');
+  headImage = loadImage('assets/heads.png');
+  tailImage = loadImage('assets/tails.png');
+  noneImage = loadImage('assets/none.png');
 }
 function setup() {
   createCanvas(canvasSize, canvasSize).parent('canvas-container');
