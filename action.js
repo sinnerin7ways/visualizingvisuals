@@ -128,7 +128,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(canvasSize, canvasSize).parent(document.querySelector('.canvas-container'));
+  createCanvas(canvasSize, canvasSize).parent('canvas-container');
   noSmooth();
   pixelDensity(1);
 }
