@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visuals: About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg">
+  <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Visuals">
+  <link rel="manifest" href="../assets/favicon/site.webmanifest">
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .about-hero {
+      width: 100%;
+      max-width: 720px;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .bobber-emblem {
+      width: clamp(80px, 20vw, 130px);
+      height: auto;
+      margin: 0 auto 1.5rem;
+      opacity: 0.9;
+    }
+    .about-section {
+      width: 100%;
+      max-width: 680px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      padding: 2rem 1.8rem;
+      margin-bottom: 1.8rem;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .about-section h2 {
+      font-size: clamp(1.4rem, 4vw, 1.8rem);
+      margin-bottom: 1rem;
+      opacity: 0.95;
+    }
+    .about-section p {
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      line-height: 1.65;
+      opacity: 0.88;
+    }
+    .about-section p + p {
+      margin-top: 0.8rem;
+    }
+    .about-projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+    .about-project-chip {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.8rem 0.6rem;
+      background: rgba(255,255,255,0.04);
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.08);
+      text-decoration: none;
+      transition: transform 0.14s, background 0.14s;
+    }
+    .about-project-chip:hover {
+      transform: scale(1.04);
+      background: rgba(255,255,255,0.08);
+    }
+    .about-project-chip img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+    .about-project-chip span {
+      font-size: 0.88rem;
+      opacity: 0.85;
+      text-align: center;
+    }
+    .tagline {
+      font-size: clamp(1.05rem, 3.5vw, 1.35rem);
+      opacity: 0.75;
+      margin-top: 2rem;
+      text-align: center;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <a href="/" class="title">Visualizing Visuals</a>
+  <div class="menu-wrap">
+    <img src="/assets/favicon/vv-ico.png" alt="Menu" class="menu-btn">
+    <div class="dropdown">
+      <a href="/">Home</a>
+      <a href="/contact-shop/">Contact & Shop</a>
+      <a href="/p5-projects/">p5js Projects</a>
+      <a href="/videos">Videos</a>
+    </div>
+  </div>
+</header>
+<main>
+  <h1 class="page-title">About</h1>
+
+  <div class="about-hero">
+    <!-- Fishing bobber SVG — the still point resting in moving water -->
+    <svg class="bobber-emblem" viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Bobber body -->
+      <ellipse cx="50" cy="90" rx="28" ry="38" fill="#e74c3c" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+      <!-- White stripe -->
+      <ellipse cx="50" cy="70" rx="28" ry="12" fill="#ecf0f1"/>
+      <!-- Top nipple -->
+      <ellipse cx="50" cy="54" rx="10" ry="12" fill="#e74c3c" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+      <!-- Antenna -->
+      <line x1="50" y1="42" x2="50" y2="14" stroke="rgba(255,255,255,0.5)" stroke-width="3" stroke-linecap="round"/>
+      <!-- Antenna tip -->
+      <circle cx="50" cy="11" r="5" fill="#f39c12"/>
+      <!-- Water line -->
+      <ellipse cx="50" cy="128" rx="32" ry="8" fill="#3498db" opacity="0.35"/>
+      <!-- Ripples -->
+      <ellipse cx="50" cy="130" rx="44" ry="6" fill="none" stroke="#3498db" stroke-width="1.5" opacity="0.2"/>
+      <ellipse cx="50" cy="130" rx="58" ry="8" fill="none" stroke="#3498db" stroke-width="1" opacity="0.12"/>
+    </svg>
+    <p class="tagline">the still point resting in moving water</p>
+  </div>
+
+  <section class="about-section">
+    <h2>What is this?</h2>
+    <p>
+      Visualizing Visuals is an art church — a space where ideas become interactive experiences.
+      Part thrift-store aesthetic, part generative code, part plein-air field study.
+      The work spans oil on canvas, digital art, p5.js sketches, and whatever medium best holds the particular truth being pursued.
+    </p>
+    <p>
+      Every piece here started as a feeling someone wanted to see externalized. A mood. A pattern.
+      A question with no words yet. That's what gets made visible.
+    </p>
+  </section>
+
+  <section class="about-section">
+    <h2>Who depoyed this?</h2>
+    <p>
+      A man who dropped his IT degree to live Wu Wei. A satori-lived wanderer who drives a 2021 Nissan Kicks
+      he calls his mobile monastery, wears a homemade muslin robe dyed with foraged natural materials,
+      and carries a fishing bobber as the central symbol of his spiritual practice.
+    </p>
+    <p>
+      Clean from nicotine and THC — because satori is a better high. Living in North Alabama,
+      Hustling to make pivot shifts work. Father of a three-month-old boy. Steadily becoming.
+    </p>
+  </section>
+
+  <section class="about-section">
+    <h2>p5.js Art</h2>
+    <p>
+      generative experiments in javascript. each one a different angle of inquiry —
+      probability, terrain, mood,entropy, prophecy.
+    </p>
+    <div class="about-projects-grid">
+      <a href="/p5-projects/time-tank/" class="about-project-chip">
+        <img src="/p5-projects/canvas-icons/time-tank-ico.png" alt="Time Tank">
+        <span>Time Tank</span>
+      </a>
+      <a href="/p5-projects/perlin-map/" class="about-project-chip">
+        <img src="/p5-projects/canvas-icons/perlin-map_ico.png" alt="Perlin Map">
+        <span>Perlin Map</span>
+      </a>
+      <a href="/p5-projects/drop-sticks/" class="about-project-chip">
+        <img src="/p5-projects/canvas-icons/drop-sticks_ico.png" alt="Drop Sticks">
+        <span>Drop Sticks</span>
+      </a>
+      <a href="/p5-projects/mood-painting/" class="about-project-chip">
+        <img src="/p5-projects/canvas-icons/mood-painting_ico.png" alt="Mood Painting">
+        <span>Mood Painting</span>
+      </a>
+      <a href="/p5-projects/prophetic-pool-ball/" class="about-project-chip">
+        <img src="/p5-projects/canvas-icons/pool-ball-ico.png" alt="Prophetic Pool Ball">
+        <span>Prophetic Pool Ball</span>
+      </a>
+      <a href="/p5-projects/draw-powerball/" class="about-project-chip">
+        <img src="/p5-projects/canvas-icons/powerball_ico.png" alt="Draw Powerball">
+        <span>Draw Powerball</span>
+      </a>
+      <a href="/p5-projects/heads-tails/" class="about-project-chip">
+        <img src="/p5-projects/canvas-icons/coin.png" alt="Heads or Tails">
+        <span>Heads or Tails</span>
+      </a>
+      <a href="/p5-projects/bug-walk/" class="about-project-chip">
+        <img src="/p5-projects/canvas-icons/bug-walk-ico.png" alt="Bug Walk">
+        <span>Bug Walk</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>The Bobber</h2>
+    <p>
+      The fishing bobber is the central symbol — the still point resting in moving water.
+      Something about waiting without forcing. About letting the current do the work while you remain
+      perfectly upright, perfectly patient, perfectly present.
+    </p>
+    <p>
+      Tao meets art. Wu Wei meets generative code. That's the whole thing.
+    </p>
+  </section>
+
+</main>
+<div class="bottom-spacer"></div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector(".menu-btn");
+  const menu = document.querySelector(".dropdown");
+  btn.onclick = e => {
+    e.stopPropagation();
+    menu.classList.toggle("active");
+  };
+  document.onclick = e => {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove("active");
+    }
+  };
+});
+</script>
+</body>
+</html>
